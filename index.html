@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>my post-it board</title>
+    <style type="text/css">
+        body { background-color: aqua; }
+        #toolbar {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        #toolbar #add {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 10px;
+            color: white;
+            border-radius: 50px 50px 50px 50px;
+            background: #73AD21;
+            width: 50px;
+            height: 50px;
+            border: 2px dotted red;
+            text-align: center;
+            cursor: grab;
+            vertical-align: middle;
+        }
+        .postit {
+            background-color: lightpink;
+            width: 180px;
+            height: 180px;
+            padding: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        function addPostIt(content) {
+            alert(content);
+        }
+    </script>
+</head>
+<body>
+    <div id="postitboard">
+        <div id="postitscontainer">
+            <div class="postit" style="position:absolute; top: 500px; right: 300px;">acheter du lait</div>
+        </div>
+        <div id="toolbar" onclick="addPostIt('biche');">
+            <div id="add">+</div>
+        </div>
+    </div>
+</body>
+</html>
